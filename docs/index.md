@@ -4,7 +4,7 @@ layout: home
 hero:
   name: ModuloEditor
   text: Modular, extensible and safe Markdown editor
-  tagline: A flexible editor with plugin architecture, DOM slots, and textarea form integration.
+  tagline:  Version 0.3.0-alpha.4
   actions:
     - theme: brand
       text: Get Started
@@ -23,6 +23,7 @@ features:
   - title: Form friendly
     details: Integrates with classic HTML forms through a hidden textarea bridge.
 ---
+
 ## Quick Example
 
 ```ts
