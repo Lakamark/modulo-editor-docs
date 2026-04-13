@@ -3,6 +3,7 @@ import { defineConfig } from 'vitepress';
 export default defineConfig({
     title: 'ModuloEditor',
     description: 'Modular, extensible and safe Markdown editor',
+    base: '/modulo-editor-docs/',
 
     themeConfig: {
         nav: [
