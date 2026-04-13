@@ -1,0 +1,22 @@
+{
+  "name": "modulo-editor-docs",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Official documentation for ModuloEditor",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "vitepress": "^1.6.4"
+  }
+}
