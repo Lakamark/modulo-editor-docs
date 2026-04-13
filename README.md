@@ -31,12 +31,12 @@ npm build
 npm run preview
 ```
 ## Related
-**Library repository:**
 
-https://github.com/lakamark/ModuloEditor
+Library repository  
+[GitHub - ModuloEditor](https://github.com/lakamark/ModuloEditor)
 
-**NPM package:** 
-https://www.npmjs.com/package/@lakamark/modulo-editor
+NPM package  
+[@lakamark/modulo-editor](https://www.npmjs.com/package/@lakamark/modulo-editor)
 
-License
+## License
 MIT
