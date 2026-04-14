@@ -31,5 +31,3 @@ These elements are used to:
   <div data-mo-editor-preview></div>
 </div>
 ```
-
-This is the minimal structure required for ModuloEditor to work.
