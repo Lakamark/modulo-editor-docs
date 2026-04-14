@@ -1,5 +1,7 @@
 # Playground
 
+Main development playground for ModuloEditor.
+
 <ClientOnly>
-  <BasicEditorDemo />
+  <EditorPlayground />
 </ClientOnly>

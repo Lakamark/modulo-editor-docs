@@ -1,9 +1,12 @@
 import DefaultTheme from "vitepress/theme";
-import BasicEditorDemo from "./components/BasicEditorDemo.vue";
+import type { Theme } from "vitepress";
+import EditorPlayground from "./components/EditorPlayground.vue";
 
-export default {
-    ...DefaultTheme,
+const theme: Theme = {
+    extends: DefaultTheme,
     enhanceApp({ app }) {
-        app.component("BasicEditorDemo", BasicEditorDemo);
+        app.component("EditorPlayground", EditorPlayground);
     }
 };
+
+export default theme;

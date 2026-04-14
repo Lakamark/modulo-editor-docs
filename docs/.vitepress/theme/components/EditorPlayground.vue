@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import { onMounted, ref } from "vue";
 import {
-  ModuloEditor,
-  DefaultMarkdownProcessor,
-  PlainTextMarkdownParser,
-  DomPurifyHtmlSanitizer,
-  DEFAULT_HTML_SANITIZER_CONFIG, TextareaInputAdapter, HtmlPreviewAdapter
+  DEFAULT_HTML_SANITIZER_CONFIG,
+  DefaultMarkdownProcessor, DomPurifyHtmlSanitizer,
+  HiddenTextareaBridge,
+  HtmlPreviewAdapter,
+  ModuloEditor, PlainTextMarkdownParser,
+  TextareaInputAdapter
 } from "@lakamark/modulo-editor";
 
 const root = ref<HTMLElement | null>(null);
@@ -14,40 +15,29 @@ onMounted(() => {
   if (!root.value) {
     return;
   }
-
   const editor = ModuloEditor
       .create(root.value)
       .withInput(new TextareaInputAdapter())
       .withOutput(new HtmlPreviewAdapter())
+      .withTextareaBridge(new HiddenTextareaBridge())
       .withMarkdown(
           new DefaultMarkdownProcessor(
               new PlainTextMarkdownParser(),
               new DomPurifyHtmlSanitizer(DEFAULT_HTML_SANITIZER_CONFIG)
           )
       )
-      .build();
-
+      .build()
   editor.init();
-})
-</script>
 
+  console.log("mounted", editor);
+
+})
+
+</script>
 <template>
   <div ref="root" data-mo-editor>
-    <div
-        data-mo-editor-input
-        contenteditable="true"
-        style="min-height:120px;border:1px solid #ccc;padding:8px;margin-bottom:8px;"
-    />
-
-    <div
-        data-mo-editor-preview
-        style="min-height:120px;border:1px solid #ccc;padding:8px;"
-    />
-
-    <textarea data-mo-editor-textarea hidden />
+    <div data-mo-editor-input></div>
+    <div data-mo-editor-preview></div>
+    <textarea data-mo-editor-textarea></textarea>
   </div>
 </template>
-
-<style scoped>
-
-</style>
