@@ -1,3 +1,7 @@
+---
+prev: false
+next: false
+---
 # Builder Overview
 ModuloEditor provides a builder API to configure the editor in a modular and extensible way.
 
