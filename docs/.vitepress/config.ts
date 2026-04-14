@@ -9,6 +9,7 @@ export default defineConfig({
         nav: [
             { text: 'Guide', link: '/guide/getting-started' },
             { text: 'API', link: '/api/modulo-editor' },
+            { text: 'Try it', link: '/playground' },
             { text: 'GitHub', link: 'https://github.com/lakamark/ModuloEditor' },
         ],
         sidebar: [

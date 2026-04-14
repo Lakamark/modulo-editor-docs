@@ -1,0 +1,5 @@
+# Playground
+
+<ClientOnly>
+  <BasicEditorDemo />
+</ClientOnly>
