@@ -1,7 +1,47 @@
 # Basic Usage
+ModuloEditor works with a minimal DOM structure and can also use additional optional slots when needed.
 
-This example shows the minimal setup required to use ModuloEditor.
+## Minimal structure
+The following structure is enough to initialize the editor:
+```html
+<div data-mo-editor>
+    <div data-mo-editor-input></div>
+    <div data-mo-editor-preview></div>
+    <textarea
+        id="content"
+        name="content"
+        hidden
+        data-mo-editor-textarea
+    ></textarea>
+</div>
+```
 
+## Initialization
+The following structure is enough to initialize the editor:
+```ts
+import { ModuloEditor } from "@lakamark/modulo-editor";
+
+ModuloEditor
+    .create("[data-mo-editor]")
+    .init();
+```
+
+## Required slots
+The default DOM resolver requires these elements:
+* `data-mo-editor-input`
+* `data-mo-editor-preview`
+* `data-mo-editor-textarea`
+
+## Optional slots
+* These elements are optional and only used when present:
+* `data-mo-editor-header`
+* `data-mo-editor-toolbar`
+* `data-mo-editor-body`
+* `data-mo-editor-footer`
+* `data-mo-editor-status`
+
+## Full structure
+You can also use a more complete DOM structure:
 ```html
 <div class="mo-editor" data-mo-editor>
     <div class="mo-editor__header" data-mo-editor-header>
@@ -18,6 +58,7 @@ This example shows the minimal setup required to use ModuloEditor.
     </div>
 
     <textarea
+        id="content"
         name="content"
         hidden
         data-mo-editor-textarea
@@ -25,36 +66,22 @@ This example shows the minimal setup required to use ModuloEditor.
 </div>
 ```
 
-## JavaScript
-```ts
-import { ModuloEditor } from '@lakamark/modulo-editor';
-import '@lakamark/modulo-editor/style.css';
-
-ModuloEditor
-  .create('[data-mo-editor]')
-  .init();
-```
-
 ## Form submission
-ModuloEditor works with classic HTML forms using a hidden textarea.
+The hidden `<textarea>` is the field submitted with the form.
 ```html
 <form method="post">
     <div data-mo-editor>
-        ...
+        <div data-mo-editor-input></div>
+        <div data-mo-editor-preview></div>
+
         <textarea
-            name="content"
-            hidden
-            data-mo-editor-textarea
+                id="content"
+                name="content"
+                hidden
+                data-mo-editor-textarea
         ></textarea>
     </div>
 
     <button type="submit">Save</button>
 </form>
 ```
-## DOM slots
-
-::: tip
-ModuloEditor relies on `data-mo-editor-*` attributes to resolve DOM slots.
-
-You can fully customize the markup while keeping these attributes.
-:::

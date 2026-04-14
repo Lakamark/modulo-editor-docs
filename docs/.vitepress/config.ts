@@ -16,7 +16,6 @@ export default defineConfig({
                 text: 'Guide',
                 items: [
                     { text: 'Getting Started', link: '/guide/getting-started' },
-                    { text: 'Installation', link: '/guide/installation' },
                     { text: 'Basic Usage', link: '/guide/basic-usage' },
                 ]
             },
@@ -24,6 +23,12 @@ export default defineConfig({
                 text: 'Builder',
                 items: [
                     { text: 'Overview', link: '/builder/overview' },
+                    { text: 'create()', link: '/builder/create' },
+                    { text: 'fromTextarea()', link: '/builder/from-textarea' },
+                    { text: 'withDomInitializer()', link: '/builder/dom-initializer' },
+                    { text: 'withPlugins()', link: '/builder/with-plugins' },
+                    { text: 'withMarkdown()', link: '/builder/with-markdown' },
+                    { text: 'build()', link: '/builder/build' },
                 ],
             },
             {
