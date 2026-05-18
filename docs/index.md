@@ -4,7 +4,7 @@ layout: home
 hero:
   name: ModuloEditor
   text: Modular, extensible and safe Markdown editor
-  tagline:  Version 0.3.0-alpha.4
+  tagline:  Version 0.5.0-alpha.1
   actions:
     - theme: brand
       text: Get Started
@@ -22,6 +22,8 @@ features:
     details: Use a markdown pipeline with sanitization and controlled rendering.
   - title: Form friendly
     details: Integrates with classic HTML forms through a hidden textarea bridge.
+  - title: React Integration
+    details: Lightweight React wrapper with presets, plugins and form support.
 ---
 
 ## Quick Example
@@ -33,4 +35,20 @@ import '@lakamark/modulo-editor/style.css';
 ModuloEditor
   .create('[data-mo-editor]')
   .init();
+```
+
+## React Wrapper
+
+> New in `0.5.0-alpha.1`
+
+Use the lightweight React integration layer for React-based applications.
+
+```tsx
+import { ModuloEditor } from '@lakamark/modulo-editor';
+
+export function App() {
+  return (
+    <ModuloEditor value="# Hello World" />
+  );
+}
 ```

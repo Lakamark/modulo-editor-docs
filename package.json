@@ -20,6 +20,6 @@
     "vitepress": "^1.6.4"
   },
   "dependencies": {
-    "@lakamark/modulo-editor": "^0.3.0-alpha.4"
+    "@lakamark/modulo-editor": "file:../../modulo-editor"
   }
 }

@@ -20,6 +20,13 @@ export default defineConfig({
                 ]
             },
             {
+                text: 'React',
+                items: [
+                    { text: 'Guide', link: '/guide/react' },
+                    { text: 'API', link: '/api/react'},
+                ]
+            },
+            {
                 text: 'Builder',
                 items: [
                     { text: 'Overview', link: '/builder/' },
