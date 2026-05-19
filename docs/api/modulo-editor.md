@@ -81,10 +81,3 @@ editor.onChange((value) => {
 ```
 
 Returns an unsubscribe function.
-
-## React
-
-For React applications, see the React integration guide.
-
-- [/guide/react](/guide/react.md)
-- [/api/react](/api/react.md)
