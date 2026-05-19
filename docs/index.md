@@ -22,8 +22,6 @@ features:
     details: Use a markdown pipeline with sanitization and controlled rendering.
   - title: Form friendly
     details: Integrates with classic HTML forms through a hidden textarea bridge.
-  - title: React Integration
-    details: Lightweight React wrapper with presets, plugins and form support.
 ---
 
 ## Quick Example
@@ -36,19 +34,13 @@ ModuloEditor
   .create('[data-mo-editor]')
   .init();
 ```
+## Framework integrations
 
-## React Wrapper
+ModuloEditor is designed as a framework-agnostic editor.
 
-> New in `0.5.0-alpha.1`
+You can integrate it into React, Vue, Svelte, Laravel, or any frontend stack using the vanilla JavaScript API.
 
-Use the lightweight React integration layer for React-based applications.
+Official framework integrations are currently under active development.  
+Community wrappers and custom integrations are fully encouraged in the meantime.
 
-```tsx
-import { ModuloEditor } from '@lakamark/modulo-editor';
-
-export function App() {
-  return (
-    <ModuloEditor value="# Hello World" />
-  );
-}
-```
+The first official React integration will be released later as a dedicated package.
