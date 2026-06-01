@@ -10,7 +10,7 @@ export default defineConfig({
     nav: [
       {
         text: 'Guide',
-        link: '/guide/getting-started'
+        link: '/quick-start'
       },
       {
         text: 'GitHub',
@@ -22,7 +22,6 @@ export default defineConfig({
       {
         text: 'Getting Started',
         items: [
-          { text: 'Introduction', link: '/' },
           { text: 'Installation', link: '/installation' },
           { text: 'Quick Start', link: '/quick-start' },
         ]

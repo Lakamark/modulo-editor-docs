@@ -1,27 +1,35 @@
-# ModuloEditor
+---
+layout: home
 
-A lightweight and extensible Markdown editor built with TypeScript.
+hero:
+  name: ModuloEditor
+  text: Lightweight Markdown Editor
+  tagline: Framework agnostic, extensible, and TypeScript-first.
+  actions:
+    - theme: brand
+      text: Quick Start
+      link: /quick-start
 
-## Features
+    - theme: alt
+      text: GitHub
+      link: https://github.com/lakamark/ModuloEditor
 
-- Markdown editing
-- Live HTML preview
-- Toolbar plugins
-- Event system
-- Command system
-- Framework-agnostic
-- Fully customizable
+features:
+  - title: Quick Start
+    details: Create your first editor instance in minutes.
 
-## Quick Example
+  - title: Commands
+    details: Execute reusable editor actions such as bold, italic, and headings.
 
-```ts
-import { ModuloEditor, StarterKitPreset } from '@lakamark/modulo-editor';
+  - title: Plugins
+    details: Extend the editor with toolbar buttons, dropdowns, and custom integrations.
 
-const editor = new ModuloEditor('#editor', {
-    presets: [
-        new StarterKitPreset(),
-    ],
-});
+  - title: Events
+    details: React to editor lifecycle, content changes, and commands.
 
-editor.init();
-```
+  - title: Presets
+    details: Build editors quickly using reusable configurations.
+
+  - title: TypeScript First
+    details: Fully typed APIs designed for modern applications.
+---

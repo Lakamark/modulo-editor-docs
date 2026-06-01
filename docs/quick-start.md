@@ -5,28 +5,42 @@ This guide will help you create your first ModuloEditor instance.
 ## Create the HTML container
 
 ```html
-<div id="editor"></div>
+<form action="/" method="post">
+    <label for="editor">My Content</label>
+    <textarea id="editor">
+        Hello! My name is ModuloEditor!
+    </textarea>
+    <button type="submit">Submit</button>
+</form>
 ```
 
-## Initialize the editor
+## Initialize your application
+
+ModuloEditor provides a fluent API.
+
+You can mount ModuloEditor on an existing textarea element in your HTML document.
 
 ```ts
 import {
-    ModuloEditor,
+    DefaultEditorDomInitializer,
+    ModuloEditorCore,
     StarterKitPreset
 } from '@lakamark/modulo-editor';
 
-const editor = new ModuloEditor('#editor', {
-    presets: [
-        new StarterKitPreset(),
-    ],
-});
+const editor = ModuloEditorCore
+    .create()
+    .fromTextarea('#editor')
+    .withDomInitializer(new DefaultEditorDomInitializer())
+    .usePreset(new StarterKitPreset())
+    .build();
 
 editor.init();
 ```
 
-## Listen for content changes
+## Event System
+The core emits various events throughout its lifecycle.
 
+For example, if you want to listen for a specific event and integrate your own workflow, you can do so as shown below.
 ```ts
 editor.on('content:change', ({ value, html }) => {
     console.log(value);
@@ -34,7 +48,8 @@ editor.on('content:change', ({ value, html }) => {
 });
 ```
 
-## Execute commands
+## Execute Commands
+You can execute commands to interact with the ModuloEditor core.
 
 ```ts
 editor.executeCommand('bold');
@@ -44,8 +59,8 @@ editor.executeCommand('heading-1');
 
 ## Next Steps
 
-* [Learn about Presets](./guide/presets.md)
-* [Learn about Commands](./guide/commands.md)
-* [Learn about Plugins](./guide/plugins.md)
-* [Learn about Events](./guide/events.md)
-* [Explore the API Reference](./api/index.md)
+* [Learn about Presets](./guide/presets)
+* [Learn about Commands](./guide/commands)
+* [Learn about Plugins](./guide/plugins)
+* [Learn about Events](./guide/events)
+* [Explore the API Reference](./api/)
