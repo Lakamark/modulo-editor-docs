@@ -49,10 +49,14 @@ export default defineConfig({
       {
         text: 'API Reference',
         items: [
+          { text: 'Overview', link: '/api/' },
           { text: 'ModuloEditor', link: '/api/modulo-editor' },
           { text: 'Commands', link: '/api/commands' },
           { text: 'Plugins', link: '/api/plugins' },
           { text: 'Events', link: '/api/events' },
+          { text: 'Presets', link: '/api/presets' },
+          { text: 'DOM', link: '/api/dom' },
+          { text: 'Types', link: '/api/types' }
         ]
       }
     ],
