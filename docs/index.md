@@ -55,3 +55,11 @@ const editor = ModuloEditorCore
 
 editor.init();
 ```
+
+## Live Playground
+
+Explore ModuloEditor directly in your browser using the included StarterKitPreset.
+
+<ClientOnly>
+  <MinimalDemoModuloEditor />
+</ClientOnly>
