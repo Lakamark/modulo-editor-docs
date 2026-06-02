@@ -2,9 +2,9 @@ import { defineConfig } from 'vitepress';
 
 export default defineConfig({
   srcDir: 'docs',
-
   title: 'ModuloEditor',
   description: 'Official ModuloEditor documentation',
+  base: '/modulo-editor-docs/',
 
   themeConfig: {
     nav: [
