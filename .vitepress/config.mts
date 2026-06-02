@@ -29,11 +29,12 @@ export default defineConfig({
       {
         text: 'Guide',
         items: [
+          { text: 'DOM Initializers', link: '/guide/dom-initializers' },
+          { text: 'DOM Structure', link: '/guide/dom-structure' },
           { text: 'Presets', link: '/guide/presets' },
           { text: 'Commands', link: '/guide/commands' },
           { text: 'Plugins', link: '/guide/plugins' },
           { text: 'Events', link: '/guide/events' },
-          { text: 'DOM Structure', link: '/guide/dom' },
         ]
       },
       {

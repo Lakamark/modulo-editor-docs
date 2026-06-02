@@ -10,21 +10,17 @@ Plugins can be passed during editor creation.
 
 ```ts
 import {
-    ModuloEditor,
     StarterKitPreset,
     BoldToolbarPlugin,
-    ItalicToolbarPlugin
+    ItalicToolbarPlugin, ModuloEditorCore
 } from '@lakamark/modulo-editor';
 
-const editor = new ModuloEditor('#editor', {
-    presets: [
-        new StarterKitPreset(),
-    ],
-    plugins: [
+const editor = ModuloEditorCore
+    .create().withPlugins([
         new BoldToolbarPlugin(),
-        new ItalicToolbarPlugin(),
-    ],
-});
+        new ItalicToolbarPlugin()
+    ])
+    .build();
 
 editor.init();
 ```
