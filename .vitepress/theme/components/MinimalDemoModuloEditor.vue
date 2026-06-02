@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
 import {
-  BoldToolbarPlugin,
   DefaultEditorDomInitializer,
   ModuloEditorCore,
   StarterKitPreset,
@@ -14,11 +13,6 @@ onMounted(() => {
       .create()
       .withDomInitializer(new DefaultEditorDomInitializer())
       .fromTextarea('#modulo-editor-demo')
-      .withPlugins([
-          new BoldToolbarPlugin({
-            content: '<svg></svg>'
-          }),
-      ])
       .usePreset(new StarterKitPreset())
       .build()
 
