@@ -4,7 +4,7 @@ layout: home
 hero:
   name: ModuloEditor
   text: Lightweight Markdown Editor
-  tagline: Framework agnostic, extensible, and TypeScript-first.
+  tagline: Framework-agnostic, extensible, and TypeScript-first.
   actions:
     - theme: brand
       text: Quick Start
@@ -29,7 +29,29 @@ features:
 
   - title: Presets
     details: Build editors quickly using reusable configurations.
-
-  - title: TypeScript First
-    details: Fully typed APIs designed for modern applications.
+    
+  - title: Framework Agnostic
+    details: Designed to work with vanilla JavaScript and custom framework wrappers.
 ---
+::: warning Documentation in progress
+ModuloEditor is still in active development.
+This documentation is still being written. Some pages may be incomplete or updated frequently.
+:::
+
+<Version />
+
+## Quick Example
+
+```ts
+import {
+    ModuloEditorCore,
+    StarterKitPreset
+} from "@lakamark/modulo-editor";
+
+const editor = ModuloEditorCore
+    .create('#editor')
+    .usePreset(new StarterKitPreset())
+    .build();
+
+editor.init();
+```

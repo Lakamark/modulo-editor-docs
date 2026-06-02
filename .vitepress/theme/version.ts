@@ -1,0 +1,1 @@
+export const MODULO_VERSION = '0.6.0-alpha.2';
