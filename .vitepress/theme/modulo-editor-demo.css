@@ -9,7 +9,6 @@
 
 /* Root */
 [data-mo-editor] {
-    min-height: 500px;
     overflow: hidden;
 
     border: 1px solid var(--vp-c-divider);
@@ -79,7 +78,7 @@
     color: var(--vp-c-text-1);
     background: var(--vp-c-bg);
 
-    font-family: var(--vp-font-family-mono);
+    font-family: var(--vp-font-family-mono), serif;
     font-size: 0.9rem;
     line-height: 1.7;
 }
