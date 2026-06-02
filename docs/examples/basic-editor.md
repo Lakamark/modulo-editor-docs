@@ -2,36 +2,8 @@
 Create your first ModuloEditor instance using the default DOM initializer and the Starter Kit preset.
 
 <ClientOnly>
-  <BasicEditorDemo />
+  <BasicEditorExample />
 </ClientOnly>
-
-## Source Code
-
-```ts
-import {
-    DefaultEditorDomInitializer,
-    ModuloEditorCore,
-    StarterKitPreset,
-} from '@lakamark/modulo-editor';
-
-const editor = ModuloEditorCore
-    .create()
-    .withDomInitializer(new DefaultEditorDomInitializer())
-    .fromTextarea('#editor')
-    .usePreset(new StarterKitPreset())
-    .build();
-
-editor.init();
-```
-
-## HTML
-```html
-<textarea id="editor">
-# Hello ModuloEditor
-
-Start writing Markdown here.
-</textarea>
-```
 
 ## DOM Initializer
 

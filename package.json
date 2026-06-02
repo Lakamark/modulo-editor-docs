@@ -18,6 +18,7 @@
     "docs:preview": "vitepress preview"
   },
   "dependencies": {
-    "@lakamark/modulo-editor": "^0.6.0-alpha.2"
+    "@lakamark/modulo-editor": "^0.6.0-alpha.2",
+    "highlight.js": "^11.11.1"
   }
 }

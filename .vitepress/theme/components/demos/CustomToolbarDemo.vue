@@ -13,6 +13,10 @@ import {
 import '@lakamark/modulo-editor/reset.css'
 import '../../modulo-editor-demo.css'
 
+const emit = defineEmits<{
+  event: [message: string]
+}>()
+
 onMounted(() => {
   const editor = ModuloEditorCore
       .create()
@@ -34,25 +38,23 @@ onMounted(() => {
       ])
       .build()
 
+  editor.on('editor:init', () => {
+    emit('event', 'editor:init')
+  })
+
+  editor.on('content:change', ({ source }) => {
+    emit('event', `content:change (${source})`)
+  })
+
   editor.init()
 })
 </script>
 
 <template>
-  <div class="modulo-editor-demo">
-    <textarea id="modulo-editor-demo">
-# Hello ModuloEditor
-
-Write Markdown on the left.
-
-See the rendered output on the right.
-
-- Live Preview
-- Toolbar Commands
-- Extensible Plugins
-- StarterKitPreset
-    </textarea>
-  </div>
+  <textarea id="modulo-editor-demo">
+    # Hello ModuloEditor
+    You can add some plugins in the toolbar
+  </textarea>
 </template>
 
 <style scoped>

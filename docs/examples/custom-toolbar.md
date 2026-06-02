@@ -4,44 +4,9 @@ Create a custom toolbar by registering only the toolbar plugins your editor need
 
 ## Live Demo
 
-<CustomToolbarDemo />
-
-## Source Code
-
-```ts
-import {
-    BoldToolbarPlugin,
-    DefaultEditorDomInitializer,
-    ItalicToolbarPlugin,
-    ModuloEditorCore,
-    StarterKitPreset,
-} from '@lakamark/modulo-editor';
-
-const editor = ModuloEditorCore
-    .create()
-    .withDomInitializer(new DefaultEditorDomInitializer())
-    .fromTextarea('#modulo-editor-demo')
-    .usePreset(new StarterKitPreset())
-    .withPlugins([
-        new BoldToolbarPlugin({
-            content:  'B'
-        }),
-        new ItalicToolbarPlugin({
-            content: 'I',
-        }),
-        new HeadingToolbarPlugin(1),
-        new HeadingToolbarPlugin(2),
-        new HeadingToolbarPlugin(3),
-        new HeadingToolbarPlugin(4),
-    ])
-    .build()
-
-editor.init()
-```
-
-The Starter Kit configures the editor foundation.
-
-Toolbar features are added explicitly through plugins, allowing you to build a toolbar that matches your application's needs.
+<ClientOnly>
+  <CustomToolbarExample />
+</ClientOnly>
 
 ### HTML Strings
 

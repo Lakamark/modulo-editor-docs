@@ -42,7 +42,7 @@ export default defineConfig({
         items: [
           { text: 'Basic Editor', link: '/examples/basic-editor' },
           { text: 'Custom Toolbar', link: '/examples/custom-toolbar' },
-          { text: 'Image Upload', link: '/examples/image-upload' },
+          { text: 'Asset Upload', link: '/examples/asset-upload' },
           { text: 'Sync Scroll', link: '/examples/sync-scroll' },
         ]
       },
