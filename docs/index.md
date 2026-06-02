@@ -41,20 +41,31 @@ This documentation is still being written. Some pages may be incomplete or updat
 <Version />
 
 ## Quick Example
+Start from an existing textarea. ModuloEditor handles the editor layout, live preview, and form synchronization for you.
+
+```html
+<textarea id="editor"></textarea>
+```
 
 ```ts
 import {
+    DefaultEditorDomInitializer,
     ModuloEditorCore,
     StarterKitPreset
 } from "@lakamark/modulo-editor";
 
 const editor = ModuloEditorCore
-    .create('#editor')
+    .create()
+    .withDomInitializer(new DefaultEditorDomInitializer())
+    .fromTextarea('#editor')
     .usePreset(new StarterKitPreset())
     .build();
 
 editor.init();
 ```
+Ready to build your first editor?
+
+[Get Started →](/installation)
 
 ## Live Playground
 

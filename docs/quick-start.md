@@ -2,7 +2,19 @@
 
 This guide will help you create your first ModuloEditor instance.
 
+Before continuing, make sure ModuloEditor is installed in your project.
+
+See the [Installation Guide](./installation).
+
 ## Create the HTML container
+The surrounding HTML structure is entirely up to you.
+
+ModuloEditor only requires:
+- an existing textarea
+- a DOM initializer
+- a preset
+
+With these three pieces, you already have a functional Markdown editor with a toolbar, live preview, and form synchronization.
 
 ```html
 <form action="/" method="post">
